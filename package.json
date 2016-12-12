@@ -1,0 +1,19 @@
+{
+  "name": "soa-node-design",
+  "version": "1.0.0",
+  "description": "Sample project for testing a SOA architecture on a Node API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mccroryp/soa-node-design.git"
+  },
+  "author": "Paul McCrory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mccroryp/soa-node-design/issues"
+  },
+  "homepage": "https://github.com/mccroryp/soa-node-design#readme"
+}
