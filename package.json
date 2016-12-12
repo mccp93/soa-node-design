@@ -2,7 +2,7 @@
   "name": "soa-node-design",
   "version": "1.0.0",
   "description": "Sample project for testing a SOA architecture on a Node API.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "npm test"
   },
@@ -12,6 +12,17 @@
   },
   "author": "Paul McCrory",
   "license": "MIT",
+  "dependencies": {
+    "body-parser": "*",
+    "colors": "*",
+    "express": "*",
+    "lodash": "*",
+    "morgan": "*"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "supertest": "^1.0.1"
+  },
   "bugs": {
     "url": "https://github.com/mccroryp/soa-node-design/issues"
   },
