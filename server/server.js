@@ -1,13 +1,15 @@
 var express = require('express');
 var app = express();
-var api = require('./api/api');
-
-// setup the app middlware
+var apiRouter = require('./api/api');
+var err = require('./middleware/err');
+// IIFE for the init of middleware.
 require('./middleware/appMiddlware')(app);
 
-// setup the api
-app.use('/api/', api);
+// Router setup.
+app.use('/api/', apiRouter);
+app.use(err());
+
 // set up global error handling
 
 // export the app for testing
-module.exports = app;
+app.listen(3000);
