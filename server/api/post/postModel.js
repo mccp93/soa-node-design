@@ -25,4 +25,9 @@ var postSchema = new Schema({
     }]
 });
 
+var Post = mongoose.model('post', PostSchema);
+Post.find({title: 'whatever'}, function(err, doc){
+
+});
+
 module.exports = mongoose.model('post', postSchema);

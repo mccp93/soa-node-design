@@ -3,7 +3,7 @@ var app = express();
 var apiRouter = require('./api/api');
 var err = require('./middleware/err');
 // IIFE for the init of middleware.
-require('./middleware/appMiddlware')(app);
+require('./middleware/appMiddleware')(app);
 
 // Router setup.
 app.use('/api/', apiRouter);
