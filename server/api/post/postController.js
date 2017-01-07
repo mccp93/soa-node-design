@@ -1,5 +1,6 @@
 var Post = require('./postModel');
 var _ = require('lodash');
+var logger = require('../../util/logger');
 
 exports.params = function(req, res, next, id){
     Post.findById(id)
@@ -55,6 +56,7 @@ exports.post = function(req, res, next){
         .then(function(post){
             res.json(post);
         }, function(err){
+            logger.error(err);
             next(err);
         });
 }

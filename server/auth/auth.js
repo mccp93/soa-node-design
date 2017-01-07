@@ -16,7 +16,17 @@ exports.decodeToken = function () {
 
 exports.getFreshUser = function () {
     return function (req, res, next) {
-
+        User.findById(req.user._id)
+            .then(function(user){
+                if(!user){
+                    res.status(401).send('Unauthorized');
+                }else{
+                    req.user = user;
+                    next();
+                }
+        }, function(err){
+            next(err);
+        });
     }
 };
 
@@ -49,6 +59,6 @@ exports.signToken = function (id) {
     return jwt.sign(
         { _id: id },
         config.secrets.jwt,
-        { expiresInMinutes: config.expireTime }
+        { expiresIn: config.expireTime }
     );
 };

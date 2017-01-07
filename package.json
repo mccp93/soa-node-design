@@ -13,10 +13,16 @@
   "author": "Paul McCrory",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "*",
     "body-parser": "*",
     "colors": "*",
+    "cors": "*",
     "express": "*",
+    "express-jwt": "*",
+    "jsonwebtoken": "*",
     "lodash": "*",
+    "method-override": "^2.3.7",
+    "mongoose": "*",
     "morgan": "*"
   },
   "devDependencies": {

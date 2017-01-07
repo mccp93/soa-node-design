@@ -25,7 +25,7 @@ var postSchema = new Schema({
     }]
 });
 
-var Post = mongoose.model('post', PostSchema);
+var Post = mongoose.model('post', postSchema);
 Post.find({title: 'whatever'}, function(err, doc){
 
 });

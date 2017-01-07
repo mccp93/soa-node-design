@@ -34,6 +34,18 @@ var logger = {
     // with the console object as the context
     // and the new colored args :)
     consoleLog.apply(console, args);
+  },
+
+  error: function(){
+    var args = _.toArray(arguments)
+      .map(function(arg) {
+        arg = arg.stack || arg;
+        var name = arg.name || '[ E R R O R ]';
+        var log = name.yellow + ' ' + arg.red;
+        return log;
+      });
+
+      consoleLog.apply(console, args);
   }
 };
 
